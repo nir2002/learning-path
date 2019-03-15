@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Spring } from 'react-spring/renderprops'
-import FrontendImg from './../images/frontend.png'
-import BackendImg from './../images/backend.png'
 import RoadMap from './RoadMap'
 
 const frontendGraph = {
