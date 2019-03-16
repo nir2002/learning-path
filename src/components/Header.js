@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Spring } from 'react-spring/renderprops'
 import FrontendRoadMap from './Roadmaps/FrontendRoadMap'
+import BackendRoadMap from './Roadmaps/BackendRoadMap'
 
 const Header = props => {
   return (
@@ -28,7 +29,7 @@ const Header = props => {
       </div>
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} delay={1000}>
         {props => (
-          <div style={{ ...props, width: '220%', marginTop: 20 }}>
+          <div style={{ ...props, width: '130%', marginTop: 20 }}>
             <h3>Choose a skill to acquire!</h3>
             <div
               style={{
@@ -46,6 +47,7 @@ const Header = props => {
               <div style={{ width: '30%' }}>
                 <h4>Backend</h4>
                 {/* <img src={BackendImg} style={{ height: 250, width: '100%' }} /> */}
+                <BackendRoadMap />
               </div>
               <div style={{ width: '30%' }}>
                 <h4>Devops</h4>
