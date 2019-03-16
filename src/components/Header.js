@@ -1,17 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Spring } from 'react-spring/renderprops'
-import RoadMap from './RoadMap'
-
-const frontendGraph = {
-  nodes: [
-    { id: 1, label: 'Frontend Developer', title: 'node 1 tootip text' },
-    { id: 2, label: 'HTML', title: 'node 2 tootip text' },
-    { id: 3, label: 'CSS', title: 'node 3 tootip text' },
-    { id: 4, label: 'JavaScript', title: 'node 4 tootip text' },
-  ],
-  edges: [{ from: 1, to: 2 }, { from: 1, to: 3 }, { from: 1, to: 4 }],
-}
+import FrontendRoadMap from './Roadmaps/FrontendRoadMap'
 
 const Header = props => {
   return (
@@ -20,7 +10,7 @@ const Header = props => {
       <span className="icon fa-diamond" />
     </div> */}
       <div>
-        <h1>Ready to be your best?</h1>
+        <h1>Ready to be at your best?</h1>
         <h3>Learn Better. Be Better.</h3>
       </div>
       <div className="content">
@@ -50,7 +40,7 @@ const Header = props => {
               <div style={{ width: '30%' }}>
                 <h4>Frontend</h4>
                 {/* <img src={FrontendImg} style={{ height: 250, width: '100%' }} /> */}
-                <RoadMap />
+                <FrontendRoadMap />
               </div>
               <div style={{ width: '30%' }}>
                 <h4>Backend</h4>
