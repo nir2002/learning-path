@@ -1,6 +1,8 @@
+/* eslint-disable */
 import React from 'react'
 import Tree from 'react-tree-graph'
-import roadmap from './../roadmap.css'
+// eslint-disable-next-lines
+import roadmap from './../../assets/css/roadmap.css'
 
 export default class RoadMap extends React.Component {
   render() {

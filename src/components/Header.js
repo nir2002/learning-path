@@ -16,6 +16,7 @@ const Header = props => {
       <div className="content">
         <div className="inner">
           <iframe
+            title="product-explainer-video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/6vMO3XmNXe4?controls=0"
