@@ -8,7 +8,7 @@ const data = {
       name: 'HTML',
       children: [
         {
-          name: 'The Fundamentals',
+          name: 'HTML Fundamentals',
           children: [
             { name: 'Text' },
             { name: 'Links' },
@@ -28,7 +28,7 @@ const data = {
       name: 'CSS',
       children: [
         {
-          name: 'The Fundamentals',
+          name: 'CSS Fundamentals',
           children: [
             { name: 'Positioning' },
             { name: 'Flexbox' },
@@ -43,7 +43,7 @@ const data = {
       name: 'JavaScript',
       children: [
         {
-          name: 'The Fundamentals',
+          name: 'JavaScript Fundamentals',
           children: [
             { name: 'Variables' },
             { name: 'Functions' },
