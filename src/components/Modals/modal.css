@@ -1,0 +1,73 @@
+.react-modal {
+    top: 0;
+    left: 0;
+}
+
+.email-modal {
+    color: black;
+}
+
+.modal-body {
+    padding: 40px;
+    color: black;
+}
+
+.modal-body h2 {
+    color: black;
+}
+
+.react-modal-body {
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 103;
+    min-width: 26%;
+    min-height: 325px;
+    display: none;
+}
+
+.e-but {
+    padding: 6px;
+    border: 1px darkgrey solid;
+    padding-left: 8px;
+    padding-right: 9px;
+    background: #ecfaff;
+}
+
+.e-img {
+    width: 20px;
+}
+
+span.e-but:hover {
+    background: #a1e6ff;
+}
+
+.modal-body p {
+    margin-bottom: 20px;
+}
+
+.modal-body input {
+    color: black;
+    padding-left: 10px;
+    width: 48%;
+}
+
+.modal-body textarea {
+    border: 1px black solid;
+    margin-top: 16px;
+    padding: 8px;
+    min-height: 130px;
+}
+
+
+.modal-body button{
+    color: black !important;
+    border: 1px black solid;
+    margin-top: 17px;
+    background: #eefcff;
+}
+.e-err {
+    color: #e80000;
+    font-size: 20px;
+    font-style: oblique;
+}

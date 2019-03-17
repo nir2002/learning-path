@@ -3,8 +3,17 @@ import PropTypes from 'prop-types'
 import { Spring } from 'react-spring/renderprops'
 import FrontendRoadMap from './Roadmaps/FrontendRoadMap'
 import BackendRoadMap from './Roadmaps/BackendRoadMap'
+import EmailModal from './Modals/EmailModal';
+import Slider from "react-slick";
 
+import "./header.css";
 const Header = props => {
+  var settings = {
+    dots: true,
+    autoplay: true,
+    speed: 1800,
+    autoplaySpeed: 4000
+  };
   return (
     <header id="header" style={props.timeout ? { display: 'none' } : {}}>
       {/* <div className="logo">
@@ -39,21 +48,31 @@ const Header = props => {
                 marginTop: 50,
               }}
             >
-              <div style={{ width: '30%' }}>
-                <h4>Frontend</h4>
-                {/* <img src={FrontendImg} style={{ height: 250, width: '100%' }} /> */}
-                <FrontendRoadMap />
-              </div>
-              <div style={{ width: '30%' }}>
-                <h4>Backend</h4>
-                {/* <img src={BackendImg} style={{ height: 250, width: '100%' }} /> */}
-                <BackendRoadMap />
-              </div>
-              <div style={{ width: '30%' }}>
-                <h4>Devops</h4>
-                {/* <img src={FrontendImg} style={{ height: 250, width: '100%' }} /> */}
+              <div className="container">
+                <Slider {...settings}>
+
+                  <div>
+                    <h4>Frontend</h4>
+                    {/* <img src={FrontendImg} style={{ height: 250, width: '100%' }} /> */}
+                    <FrontendRoadMap />
+
+                  </div>
+                  <div >
+                    <h4>Backend</h4>
+                    {/* <img src={BackendImg} style={{ height: 250, width: '100%' }} /> */}
+                    <BackendRoadMap />
+
+                  </div>
+                  <div >
+                    <h4>Devops</h4>
+
+                    {/* <img src={FrontendImg} style={{ height: 250, width: '100%' }} /> */}
+                  </div>
+                </Slider>
               </div>
             </div>
+          
+            <EmailModal />
           </div>
         )}
       </Spring>

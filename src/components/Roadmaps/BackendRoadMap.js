@@ -47,11 +47,11 @@ const data = {
     },
     {
       name: 'Testing',
-      children: [{ name: '...' }],
+      children: [{ name: '... ' }],
     },
     {
       name: 'Caching',
-      children: [{ name: '...' }],
+      children: [{ name: '...  ' }],
     },
     {
       name: 'RESTful APIs',
@@ -64,10 +64,10 @@ const data = {
       children: [{ name: 'Docker' }, { name: 'Kubernetes' }],
     },
     {
-      name: '...',
+      name: '...   ',
     },
     {
-      name: '...',
+      name: '...    ',
     },
   ],
 }
