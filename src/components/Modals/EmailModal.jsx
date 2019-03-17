@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Modal from "react-animated-modal";
+//import Modal from "react-animated-modal";
 import "./modal.css"
 import Ratings from 'react-ratings-declarative';
 /* eslint-disable */
@@ -12,10 +12,18 @@ class EmailModal extends Component {
     state = {
         showModal: false,
         showError: false,
-        showConfirm: false
+        showConfirm: false,
+        modalActive:false
     };
 
+    Modal = null;
     email = "";
+
+     componentDidMount() {    
+            this.Modal = require("react-animated-modal").default;
+            this.setState({modalActive:true})
+    }
+
 
     changeRating = (newRating) => {
         this.setState({
@@ -24,7 +32,7 @@ class EmailModal extends Component {
     }
     submitEmail = (email) => {
         if (validateEmail(email)) {
-            console.log("Mail recived: ",email);
+            console.log("Mail recived: ", email);
             this.setState(() => ({ showModal: false }), () => {
                 this.setState({ showConfirm: true });
             });
@@ -40,11 +48,12 @@ class EmailModal extends Component {
         return (
             <div className={"email-modal"}>
                 <div style={{ marginTop: 28 }}>
-                    <button onClick={() => { this.setState({ showModal: true }); this.email=""; }}>Get map</button>
+                    <button onClick={() => { this.setState({ showModal: true }); this.email = ""; }}>Get map</button>
                 </div>
-                <Modal
+                {this.state.modalActive? 
+                <this.Modal
                     visible={this.state.showModal}
-                    closemodal={() => this.setState({ showModal: false,showError: false })}
+                    closemodal={() => this.setState({ showModal: false, showError: false })}
                     type="flipInX"
                 >
                     <div className={"modal-body"}>
@@ -57,10 +66,11 @@ class EmailModal extends Component {
                         {this.state.showError ? <div className="e-err">Invalid email</div> : null}
                         <div style={{ "fontSize": 16 }}>no spam, we promise</div>
                     </div>
-                </Modal>
-                <Modal
+                </this.Modal>:null}
+                {this.state.modalActive? 
+                <this.Modal
                     visible={this.state.showConfirm}
-                    closemodal={() => this.setState({ showConfirm: false,showError: false })}
+                    closemodal={() => this.setState({ showConfirm: false, showError: false })}
                     type="flipInX"
                 >
                     <div className={"modal-body"}>
@@ -84,9 +94,9 @@ class EmailModal extends Component {
                             </Ratings>
                         </div>
                         <textarea></textarea>
-                        <button onClick={()=>{this.setState({ showConfirm: false,showError: false })}}>Send</button>
+                        <button onClick={() => { this.setState({ showConfirm: false, showError: false }) }}>Send</button>
                     </div>
-                </Modal>
+                </this.Modal>:null}
             </div>
         );
     }
