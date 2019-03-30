@@ -1,0 +1,10 @@
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 80vw;
+  height: 70vh;
+}

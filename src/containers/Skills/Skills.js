@@ -31,7 +31,7 @@ class Skills extends Component {
   render() {
     return (
       <section className="skills">
-        What skill would like to acquire?
+        <h2>What skill would like to acquire?</h2>
         {this.renderSkills()}
       </section>
     );

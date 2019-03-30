@@ -3,6 +3,12 @@ import './mapGenerator.css';
 
 class MapGenerator extends Component {
   state = {};
+
+  componentDidMount() {
+    const { onGenerate } = this.props;
+    setTimeout(onGenerate, 8000);
+  }
+
   render() {
     return (
       <section>

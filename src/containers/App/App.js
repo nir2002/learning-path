@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Skills from '../Skills';
 import skillsData from '../../data/skills';
+import TypeForm from '../TypeForm';
 import MapGenerator from '../MapGenerator';
 import RoadMap from '../RoadMap.js';
 
@@ -12,7 +13,7 @@ class App extends Component {
   }
 
   state = {
-    step: 4
+    step: 1
   };
 
   setStep(step) {
@@ -30,14 +31,13 @@ class App extends Component {
         );
       case 2:
         return (
-          // <TypeForm
-          //   formDataUrl="https://nirparisian.typeform.com/to/L2Qfvo"
-          //   onSubmit={() => this.setStep(3)}
-          // />
-          <button onClick={() => this.setStep(3)}>Submit Form</button>
+          <TypeForm
+            formDataUrl="https://nirparisian.typeform.com/to/L2Qfvo"
+            onSubmit={() => this.setStep(3)}
+          />
         );
       case 3:
-        return <MapGenerator />;
+        return <MapGenerator onGenerate={() => this.setStep(4)} />;
       case 4:
         return <RoadMap />;
     }
