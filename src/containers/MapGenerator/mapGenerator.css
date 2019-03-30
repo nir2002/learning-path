@@ -1,0 +1,63 @@
+/* Animation */
+@keyframes first-node-animation {
+
+  66%,
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes second-node-animation {
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes third-node-animation {
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation - End */
+
+#map-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node {
+  width: 20vh;
+  height: 20vh;
+  border: solid black 1px;
+  border-radius: 100px;
+  background: rgb(233, 64, 64);
+  margin-top: 35px;
+}
+
+#first-node {
+  opacity: 0;
+  margin-right: 25vw;
+  animation: first-node-animation 3s infinite;
+}
+
+#second-node {
+  opacity: 0;
+  margin-left: 25vw;
+  animation: second-node-animation 3s infinite;
+}
+
+#third-node {
+  opacity: 0;
+  margin-right: 20vw;
+  animation: third-node-animation 3s infinite;
+}

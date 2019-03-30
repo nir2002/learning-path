@@ -21,7 +21,7 @@ class Skills extends Component {
         className={`skill-card ${
           skill.isAvailable ? 'available' : 'not-available'
         }`}
-        onClick={onChooseSkill}
+        onClick={skill.isAvailable ? onChooseSkill : undefined}
         key={index}
       >
         {skill.title}
@@ -29,7 +29,12 @@ class Skills extends Component {
     ));
   }
   render() {
-    return <section className="skills">{this.renderSkills()}</section>;
+    return (
+      <section className="skills">
+        What skill would like to acquire?
+        {this.renderSkills()}
+      </section>
+    );
   }
 }
 

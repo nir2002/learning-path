@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Skills from '../Skills/Skills';
+import Skills from '../Skills';
 import skillsData from '../../data/skills';
-import TypeForm from '../TypeForm/TypeForm';
+import MapGenerator from '../MapGenerator';
+import RoadMap from '../RoadMap.js';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
   }
 
   state = {
-    step: 1
+    step: 4
   };
 
   setStep(step) {
@@ -22,27 +23,30 @@ class App extends Component {
 
   renderStep() {
     switch (this.state.step) {
+      default:
       case 1:
         return (
           <Skills skills={skillsData} onChooseSkill={() => this.setStep(2)} />
         );
       case 2:
         return (
-          <TypeForm formDataUrl="https://nirparisian.typeform.com/to/L2Qfvo" />
+          // <TypeForm
+          //   formDataUrl="https://nirparisian.typeform.com/to/L2Qfvo"
+          //   onSubmit={() => this.setStep(3)}
+          // />
+          <button onClick={() => this.setStep(3)}>Submit Form</button>
         );
-
-      default:
-        return null;
+      case 3:
+        return <MapGenerator />;
+      case 4:
+        return <RoadMap />;
     }
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          What skill would like to acquire?
-          {this.renderStep()}
-        </header>
+        <header className="App-header">{this.renderStep()}</header>
       </div>
     );
   }
