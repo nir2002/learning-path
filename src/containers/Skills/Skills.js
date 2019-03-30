@@ -3,30 +3,33 @@ import PropTypes from 'prop-types';
 import './skills.css';
 
 class Skills extends Component {
-  propTypes = {
+  static propTypes = {
     skills: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,
         isAvailable: PropTypes.bool
       })
-    ).isRequired
+    ).isRequired,
+    onChooseSkill: PropTypes.func.isRequired
   };
 
   renderSkills() {
-    const { skills } = this.props;
+    const { skills, onChooseSkill } = this.props;
 
-    return skills.map(skill => (
+    return skills.map((skill, index) => (
       <div
         className={`skill-card ${
           skill.isAvailable ? 'available' : 'not-available'
         }`}
+        onClick={onChooseSkill}
+        key={index}
       >
         {skill.title}
       </div>
     ));
   }
   render() {
-    return <section class="skills">{this.renderSkills()}</section>;
+    return <section className="skills">{this.renderSkills()}</section>;
   }
 }
 
