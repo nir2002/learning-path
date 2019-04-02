@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RoadMapImg from './../../assets/RoadMapSample.jpeg';
+import RoadMapImg from './../../assets/frontend.png';
 import './roadMap.css';
 
 class RoadMap extends Component {
