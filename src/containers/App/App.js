@@ -3,8 +3,9 @@ import './App.css';
 import Skills from '../Skills';
 import skillsData from '../../data/skills';
 import TypeForm from '../TypeForm';
-import MapGenerator from '../MapGenerator';
-import RoadMap from '../RoadMap.js';
+// import MapGenerator from '../MapGenerator';
+// import RoadMap from '../ReactRoadmap/index.js';
+import ReactRoadmap from '../ReactRoadmap/index.js';
 
 class App extends Component {
   constructor(props) {
@@ -30,16 +31,15 @@ class App extends Component {
           <Skills skills={skillsData} onChooseSkill={() => this.setStep(2)} />
         );
       case 2:
+        //   return <MapGenerator onGenerate={() => this.setStep(3)} />;
+        return <ReactRoadmap />;
+      case 3:
         return (
           <TypeForm
             formDataUrl="https://nirparisian.typeform.com/to/L2Qfvo"
             onSubmit={() => this.setStep(3)}
           />
         );
-      case 3:
-        return <MapGenerator onGenerate={() => this.setStep(4)} />;
-      case 4:
-        return <RoadMap />;
     }
   }
 

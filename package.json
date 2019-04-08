@@ -4,8 +4,17 @@
   "private": true,
   "dependencies": {
     "@typeform/embed": "^0.7.0",
+    "@vx/gradient": "^0.0.183",
+    "@vx/group": "^0.0.183",
+    "@vx/hierarchy": "^0.0.183",
+    "@vx/responsive": "^0.0.188",
+    "@vx/shape": "^0.0.184",
+    "@vx/text": "^0.0.183",
+    "d3-hierarchy": "^1.1.8",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-move": "^5.2.1",
     "react-scripts": "2.1.8"
   },
   "scripts": {
@@ -22,8 +31,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "prop-types": "^15.7.2"
-  }
+  ]
 }

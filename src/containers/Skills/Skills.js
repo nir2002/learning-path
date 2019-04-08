@@ -30,9 +30,9 @@ class Skills extends Component {
   }
   render() {
     return (
-      <section className="skills">
-        <h2>What skill would like to acquire?</h2>
-        {this.renderSkills()}
+      <section>
+        <h2>What Skill Would You Like To Acquire?</h2>
+        <div className="skills">{this.renderSkills()}</div>
       </section>
     );
   }
