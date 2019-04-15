@@ -1,14 +1,26 @@
 const skills = [
   {
-    title: 'Web Development',
+    title: 'React',
     isAvailable: true
   },
   {
-    title: 'Excel',
+    title: 'Vue',
     isAvailable: false
   },
   {
-    title: 'Cooking',
+    title: 'JavaScript',
+    isAvailable: false
+  },
+  {
+    title: 'CSS',
+    isAvailable: false
+  },
+  {
+    title: 'Node.js',
+    isAvailable: false
+  },
+  {
+    title: 'Visual Studio Code',
     isAvailable: false
   }
 ];
